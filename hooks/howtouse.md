@@ -13,10 +13,12 @@ import apiClient from '../services/apiClient';
 import LoadingSpinner from '../components/common/LoadingSpinner';
 
 const MyComponent = () => {
+  // useLoading 훅에서 로딩 상태와 비동기 실행 함수 가져오기
   const [isLoading, startLoading] = useLoading();
 
   const handleFetchData = async () => {
     try {
+      // apiClient를 사용해 데이터 페칭, startLoading으로 로딩 상태 관리
       const data = await startLoading(apiClient.get('/some-endpoint'));
       console.log('Data fetched:', data);
     } catch (error) {
@@ -27,8 +29,10 @@ const MyComponent = () => {
   return (
     <div>
       {isLoading ? (
+        // 로딩 중일 때 스피너 표시
         <LoadingSpinner message="데이터를 불러오는 중..." />
       ) : (
+        // 로딩 완료 시 버튼 표시
         <button onClick={handleFetchData}>데이터 가져오기</button>
       )}
     </div>
