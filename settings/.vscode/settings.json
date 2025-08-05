@@ -50,5 +50,11 @@
   "git.enableSmartCommit": true,
   "files.eol": "\n",
   "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true
+  "files.trimTrailingWhitespace": true,
+  "vitest.enable": true,
+  "testing.automaticallyOpenPeekView": "never",
+  "testing.followRunningTest": false,
+  "vitest.commandLine": "npm run test:run",
+  "editor.rulers": [80],
+  "editor.renderWhitespace": "boundary"
 }

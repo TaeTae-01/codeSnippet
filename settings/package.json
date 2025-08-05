@@ -1,11 +1,25 @@
 {
   "사용법" : "package.json 파일의 스크립트 부분에 추가하기",
   "scripts": {
+    "dev": "vite",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:prod": "cross-env NODE_ENV=production eslint .",
     "lint:prod:fix": "cross-env NODE_ENV=production eslint . --fix",
     "lint:release": "cross-env NODE_ENV=production RELEASE=true eslint .",
-    "lint:release:fix": "cross-env NODE_ENV=production RELEASE=true eslint . --fix"
+    "lint:release:fix": "cross-env NODE_ENV=production RELEASE=true eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "build": "vite build",
+    "build:staging": "vite build --mode staging",
+    "build:production": "vite build --mode production",
+    "preview": "vite preview",
+    "prebuild": "npm run lint:prod && npm run format:check",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest --watch",
+    "test:silent": "vitest run --silent"
   }
 }

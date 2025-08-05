@@ -45,9 +45,11 @@ export default defineConfig(({ mode }) => {
       chunkSizeWarningLimit: 500,
       terserOptions: {
         compress: {
+          /* eslint-disable camelcase */
           drop_console: mode === "production",
           drop_debugger: mode === "production",
           pure_funcs: mode === "production" ? ["console.log"] : [],
+          /* eslint-enable camelcase */
         },
       },
       rollupOptions: {
