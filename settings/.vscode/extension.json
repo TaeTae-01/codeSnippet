@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "dsznajder.es7-react-js-snippets",
+    "burkeholland.simple-react-snippets",
+    "christian-kohler.npm-intellisense",
+    "christian-kohler.path-intellisense",
+    "mikestead.dotenv",
+    "formulahendry.auto-rename-tag",
+    "formulahendry.auto-close-tag",
+    "eamodio.gitlens",
+    "pkief.material-icon-theme",
+    "ritwickdey.liveserver"
+  ]
+}
