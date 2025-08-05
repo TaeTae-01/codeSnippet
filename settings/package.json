@@ -1,0 +1,11 @@
+{
+  "사용법" : "package.json 파일의 스크립트 부분에 추가하기",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:prod": "cross-env NODE_ENV=production eslint .",
+    "lint:prod:fix": "cross-env NODE_ENV=production eslint . --fix",
+    "lint:release": "cross-env NODE_ENV=production RELEASE=true eslint .",
+    "lint:release:fix": "cross-env NODE_ENV=production RELEASE=true eslint . --fix"
+  }
+}
