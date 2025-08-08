@@ -1,6 +1,29 @@
-# apiClient
+# API Client 사용법
 
-## 주요 기능 및 설명
+## ⚠️ 중요: API Client 위치 변경
+
+**apiClient는 `config/api.js`로 이동되었습니다.**
+
+- 더 고급 기능 제공 (토큰 갱신, 재시도 로직, 디버그 로그)
+- 중앙화된 설정 관리
+- Supabase 전환 가이드 포함
+
+## 사용법
+
+```jsx
+import apiClient from '../config/api.js'; // 새로운 경로
+
+const fetchUserInfo = async () => {
+  try {
+    const data = await apiClient.get('/user/profile');
+    console.log('사용자 정보:', data);
+  } catch (error) {
+    console.error('요청 실패:', error.message);
+  }
+};
+```
+
+## 기존 설명 (참고용)
 
 apiClient는 axios를 기반으로 구성된 커스텀 API 클라이언트로, 공통 요청 설정, 인증 토큰 자동 주입, 응답 처리, 네트워크 오류 재시도 등의 기능을 통합 제공합니다.
 
@@ -73,7 +96,7 @@ apiClient는 axios를 기반으로 구성된 커스텀 API 클라이언트로, �
 ## 예시 코드
 
 ```jsx
-import apiClient from '../services/apiClient';
+import apiClient from '../config/api';
 
 const fetchUserInfo = async () => {
   try {
